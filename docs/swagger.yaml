@@ -1,0 +1,160 @@
+definitions:
+  entity.Product:
+    type: object
+  entity.User:
+    type: object
+info:
+  contact: {}
+paths:
+  /api/product/:
+    get:
+      consumes:
+      - application/json
+      description: Get all product
+      parameters:
+      - description: Value
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Product'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            items:
+              $ref: '#/definitions/entity.Product'
+            type: array
+      summary: Get all product
+      tags:
+      - Get all product
+    post:
+      consumes:
+      - application/json
+      description: Create new product
+      parameters:
+      - description: Value
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Product'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/entity.Product'
+      summary: Create new product
+      tags:
+      - Create new product
+  /api/product/:id:
+    delete:
+      consumes:
+      - application/json
+      description: Delete product by ID
+      parameters:
+      - description: Value
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Product'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/entity.Product'
+      summary: Delete product by ID
+      tags:
+      - Delete product by ID
+    get:
+      consumes:
+      - application/json
+      description: Get product by ID
+      parameters:
+      - description: Value
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Product'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/entity.Product'
+      summary: Get product by ID
+      tags:
+      - Get product by ID
+    put:
+      consumes:
+      - application/json
+      description: Update product by ID
+      parameters:
+      - description: Value
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.Product'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/entity.Product'
+      summary: Update product by ID
+      tags:
+      - Delete product by ID
+  /api/user/profile:
+    get:
+      consumes:
+      - application/json
+      description: Get profile User
+      parameters:
+      - description: this is a test file
+        in: formData
+        name: file
+        required: true
+        type: file
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+      summary: Get profile User
+      tags:
+      - Get User
+    put:
+      consumes:
+      - application/json
+      description: Update profile user
+      parameters:
+      - description: Value
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/entity.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/entity.User'
+      summary: Update profile user
+      tags:
+      - Update user
+swagger: "2.0"
