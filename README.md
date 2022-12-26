@@ -363,4 +363,39 @@ Response success (Status: 200)
 # Schema Image
 ![schema](https://github.com/luongdinhkhanhvinh/codebase-golang/blob/main/docs/schema.png/?raw=true)
 
-# codebase-golang
+# Swagger Doc 
+## Run when new api and override docs
+```
+swag init  
+```
+
+# Swagger Doc 
+## Change environment in file .env (use Postgres)
+```
+    DB_USER=
+    DB_PASSWORD=
+    DB_NAME=
+    DB_HOST=
+    DB_PORT=
+    JWT_SECRET=
+```
+
+## Run command or use Makefile run
+```
+go run main.go
+```
+
+## Build command or use Makefile run
+```
+go build -o bin/main main.go
+```
+
+
+## Makefile 
+```
+build:
+	go build -o bin/main main.go
+
+run:
+	go run main.go
+```
