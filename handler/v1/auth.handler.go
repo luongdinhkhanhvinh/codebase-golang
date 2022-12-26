@@ -34,6 +34,15 @@ func NewAuthHandler(
 	}
 }
 
+// Login
+// @Summary Login
+// @Description Login
+// @Tags Login
+// @Accept json
+// @Produce json
+// @Param user body entity.Product true "Value"
+// @Success 201
+// @Router /api/auth/login [post]
 func (c *authHandler) Login(ctx *gin.Context) {
 	var loginRequest dto.LoginRequest
 	err := ctx.ShouldBind(&loginRequest)
@@ -60,6 +69,15 @@ func (c *authHandler) Login(ctx *gin.Context) {
 
 }
 
+// Register
+// @Summary Register
+// @Description Register
+// @Tags Register
+// @Accept json
+// @Produce json
+// @Param user body entity.User true "Value"
+// @Success 201
+// @Router /api/auth/register [post]
 func (c *authHandler) Register(ctx *gin.Context) {
 	var registerRequest dto.RegisterRequest
 
